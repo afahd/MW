@@ -1,5 +1,5 @@
 node('local-node') {
     git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
-    echo "$HOME"
+    echo "$WORKSPACE"
     sh "jenkins-run-pipelines.sh -p devstack"
 }
