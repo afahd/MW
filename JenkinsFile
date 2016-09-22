@@ -1,5 +1,6 @@
 node('local-node') {
     git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
-    echo env.JENKINS_HOME
-    sh '$WORKSPACE/jenkins-run-pipelines.sh -p devstack'
+    withEnv(["WORKSPACE=${pwd()}"]) {
+        sh '$WORKSPACE/jenkins-run-pipelines.sh -p devstack'
+    }
 }
