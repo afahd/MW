@@ -1,8 +1,9 @@
 node('local-node') {
     git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
     echo env.BUILD_ID
-    withEnv(['MYTOOL_HOME=/home/plumgrid/jenkins/workspace/test2']) {
-    sh "$MYTOOL_HOME/jenkins-run-pipelines.sh -p devstack"
+    withEnv(['MYTOOL_HOME=/home/plumgrid/jenkins/workspace/test2']) 
+    {
+        sh "$MYTOOL_HOME/jenkins-run-pipelines.sh -p devstack"
     }
     
 }
