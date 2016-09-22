@@ -1,4 +1,5 @@
 node('local-node') {
     git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
+    sh "export WORKSPACE="/home/plumgrid/jenkins/workspace/test2/"
     sh "/home/plumgrid/jenkins/workspace/test2/jenkins-run-pipelines.sh -p devstack"
 }
