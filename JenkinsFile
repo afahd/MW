@@ -3,7 +3,7 @@ node('local-node') {
     echo env.BUILD_ID
     withEnv(['MYTOOL_HOME=/home/plumgrid/jenkins/workspace/test2']) 
     {
-        sh "$MYTOOL_HOME"
+        sh '$BUILD_ID/jenkins-run-pipelines.sh -p devstack'
     }
     
 }
