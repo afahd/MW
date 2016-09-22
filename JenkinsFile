@@ -1,4 +1,4 @@
 node('local-node') {
-    git "https://afahd@gerrit.plumgrid.com:8443/builder"
+    git "http://afahd@gerrit.plumgrid.com:8443/builder"
     echo "hello"
 }
