@@ -13,6 +13,7 @@ node('local-node') {
        
     stage 'Pipeline'
     withEnv(["WORKSPACE=${pwd()}","JENKINS_BUILDER_SCRIPT_DIR=${pwd()}","JCFG_SKIP_PRE_CLEANUP=1","JCFG_SKIP_POST_CLEANUP=1"]) {
+        dir('middleware/build/scripts/devstack')
         sh '$WORKSPACE/jenkins-middleware-devstack-smoke.sh'
     }
 
