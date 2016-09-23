@@ -2,7 +2,7 @@ node('local-node') {
     stage 'Clone'
     git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
     stage 'Pipeline'
-    withEnv(["WORKSPACE=${pwd()}","JENKINS_BUILDER_SCRIPT_DIR=${pwd()}"]) {
+    withEnv(["WORKSPACE=${pwd()}","JENKINS_BUILDER_SCRIPT_DIR=${pwd()}","JCFG_SKIP_PRE_CLEANUP=1","JCFG_SKIP_POST_CLEANUP=1"]) {
         sh '$WORKSPACE/jenkins-run-pipelines.sh -p devstack -b master'
     }
 }
