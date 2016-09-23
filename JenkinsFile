@@ -1,15 +1,17 @@
 node('local-node') {
-    stage ('Clone')
+    stage 'Clone'
+    
+    git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
     
     dir('coral') {
         git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/coral'
     }
-    
+        
     dir('middleware') {
-         git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
+        git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
     }
-    
-   
+        
+       
     stage 'Pipeline'
     withEnv(["WORKSPACE=${pwd()}","JENKINS_BUILDER_SCRIPT_DIR=${pwd()}","JCFG_SKIP_PRE_CLEANUP=1","JCFG_SKIP_POST_CLEANUP=1"]) {
         sh '$WORKSPACE/jenkins-middleware-devstack-smoke.sh'
