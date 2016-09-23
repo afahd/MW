@@ -5,7 +5,7 @@ node('local-node') {
         git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/coral'
     }
     
-    dir('coral') {
+    dir('middleware') {
          git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
     }
     
