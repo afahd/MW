@@ -7,7 +7,7 @@ node('local-node') {
         
     dir('middleware') {
         git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
-        sh 'mkdir build; cd build; cmake ..; make install;'
+        sh 'mkdir -p build; cd build; cmake ..; make install;'
     }
         
        
