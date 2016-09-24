@@ -1,6 +1,6 @@
 node('local-node') {
     stage 'Clone'
-    git("ssh://afahd@gerrit.plumgrid.com:29418/builder")
+    git("ssh://gerrit.plumgrid.com:29418/builder")
     
     dir('coral') {
         git branch: 'master', url: 'ssh://gerrit.plumgrid.com:29418/coral'
