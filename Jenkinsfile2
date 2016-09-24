@@ -1,3 +1,7 @@
 node('master') {
-    echo 'Hello from Pipeline'
+    parallel firstBranch: {
+       echo "first"
+    }, secondBranch: {
+        echo "second"
+    },
 }
