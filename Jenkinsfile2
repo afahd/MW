@@ -3,5 +3,5 @@ node('master') {
        echo "first"
     }, secondBranch: {
         echo "second"
-    },
+    }
 }
