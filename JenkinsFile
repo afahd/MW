@@ -20,7 +20,7 @@ node('local-node') {
             stage 'lxc devstack preinit'
             sh './lxc-devstack-preinit.sh'
             stage 'lxc devstack init'
-            sh 'sudo ./lxc-devstack-init.sh -b -c "master" -w "${WORKSPACE}"'
+            sh 'sudo ./lxc-devstack-init.sh -b -c "unstable" -w "${WORKSPACE}"'
         }
     }
     
