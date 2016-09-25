@@ -22,9 +22,10 @@ node('local-node') {
             stage 'lxc devstack init'
             sh 'sudo ./lxc-devstack-init.sh -b -c "unstable" -w "${WORKSPACE}"'
         }
+        stage 'Test Execution'
+        sh '${JENKINS_BUILDER_SCRIPT_DIR}/jenkins-middleware-reviewtest.sh'
     }
     
-    stage 'Test Execution'
-    sh '${JENKINS_BUILDER_SCRIPT_DIR}/jenkins-middleware-reviewtest.sh'
+    
 
 }
