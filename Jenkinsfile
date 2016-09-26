@@ -1,5 +1,5 @@
 node('local-node') {
-    echo "env.getEnvironment()"
+    echo "$env.WORKSPACE"
     stage 'Clone'
     dir('coral') {
         git branch: 'master', url: 'ssh://gerrit.plumgrid.com:29418/coral'
