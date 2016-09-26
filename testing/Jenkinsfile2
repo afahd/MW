@@ -1,7 +1,10 @@
 node('master') {
+    
     parallel firstBranch: {
+        stage 'first'
        echo "first"
     }, secondBranch: {
+        stage 'second'
         echo "second"
     }
 }
