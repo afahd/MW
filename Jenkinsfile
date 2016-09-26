@@ -1,5 +1,6 @@
 node('local-node') {
     withEnv("JENKINS_BUILDER_SCRIPT_DIR=${pwd()}") 
+    {
         stage 'Clone'
         dir('coral') {
             git branch: 'master', url: 'ssh://gerrit.plumgrid.com:29418/coral'
@@ -25,5 +26,5 @@ node('local-node') {
 
         stage 'Test Execution'
         sh '${JENKINS_BUILDER_SCRIPT_DIR}/jenkins-middleware-reviewtest.sh'
-    ]
+    }
 }
