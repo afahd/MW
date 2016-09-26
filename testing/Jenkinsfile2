@@ -1,0 +1,7 @@
+node('master') {
+    parallel firstBranch: {
+       echo "first"
+    }, secondBranch: {
+        echo "second"
+    }
+}
