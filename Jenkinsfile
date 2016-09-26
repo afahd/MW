@@ -1,4 +1,5 @@
 node('local-node') {
+    echo "hello"
     withEnv(["JENKINS_BUILDER_SCRIPT_DIR=${pwd()}"])
     {
         stage 'Clone'
