@@ -1,5 +1,5 @@
 node('local-node') {
-    withEnv("JENKINS_BUILDER_SCRIPT_DIR=${pwd()}") 
+    withEnv(["JENKINS_BUILDER_SCRIPT_DIR=${pwd()}"])
     {
         stage 'Clone'
         dir('coral') {
