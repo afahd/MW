@@ -2,8 +2,7 @@ import groovy.json.JsonSlurper
 def clone_dependenices()
 {
     echo "hello"
-    URL url = getClass().getResource("dependencies.json");
-    File f = new File(url.toURI());
+    File f = new File("/dependencies.json");
     def slurper = new JsonSlurper()
     def jsonText = f.getText()
     def json = slurper.parseText( jsonText )
