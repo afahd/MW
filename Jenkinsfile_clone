@@ -2,7 +2,8 @@ node {
 
 dir('groovy')
 {
-  load 'jenkinshelpers.groovy'
+  def test = load 'jenkinshelpers.groovy'
+  test.clone_dependenices
 }
 
 }
