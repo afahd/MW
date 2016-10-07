@@ -1,4 +1,4 @@
-node {
+node 'local-node' {
 
 dir('groovy')
 {
