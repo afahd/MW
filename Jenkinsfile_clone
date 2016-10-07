@@ -1,5 +1,8 @@
 node {
 
-load 'groovy/jenkinshelpers.groovy'
+dir('groovy')
+{
+  load 'jenkinshelpers.groovy'
+}
 
 }
