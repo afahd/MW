@@ -1,3 +1,5 @@
+#!groovy
+
 import groovy.json.JsonSlurper
 
 def clone_dependenices()
