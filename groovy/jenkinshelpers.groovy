@@ -1,9 +1,9 @@
-#!groovy
 
 import groovy.json.JsonSlurper
 
 static void clone_dependenices()
 {
+    echo "hello"
     File f = new File('dependencies.json')
     def slurper = new JsonSlurper()
     def jsonText = f.getText()
@@ -15,6 +15,4 @@ static void clone_dependenices()
     }
 
 }
-
-echo "hello"
 return this;
