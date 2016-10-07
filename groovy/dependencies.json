@@ -1,0 +1,14 @@
+[
+  {
+    "project": "alps",
+    "location": "ssh://afahd@gerrit.plumgrid.com:29418/alps",
+    "branch": "master",
+    "build": "default"
+  },
+  {
+    "project": "coral",
+    "location": "ssh://afahd@gerrit.plumgrid.com:29418/coral",
+    "branch": "master",
+    "build": "default"
+  }
+]
