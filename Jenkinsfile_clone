@@ -5,8 +5,8 @@ git "https://github.com/afahd/MW.git"
 
 dir('groovy')
 {
-  test = load 'jenkinshelpers.groovy'
-  test.clone_dependenices()
+  load 'jenkinshelpers.groovy'
+  clone_dependenices()
 }
 
 }
