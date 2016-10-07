@@ -2,7 +2,8 @@ import groovy.json.JsonSlurper
 def clone_dependenices()
 {
     echo "hello"
-    System.out.println(new File(".").getAbsoluteFile());
+    File f1 = new File(".").getAbsolutePath();
+    echo "$f1"
     def path = "$WORKSPACE/groovy/dependencies.json" 
     File f = new File( path );
     def slurper = new JsonSlurper()
