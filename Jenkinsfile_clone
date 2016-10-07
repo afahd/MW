@@ -2,9 +2,10 @@ node('local-node'){
 
 dir('groovy')
 {
-withEnv(["WORKSPACE=${pwd()}"]) {
-  def test = load '$WORKSPACE/jenkinshelpers.groovy'
-  test.clone_dependenices
+  withEnv(["WORKSPACE=${pwd()}"]) 
+  {
+    def test = load '$WORKSPACE/jenkinshelpers.groovy'
+    test.clone_dependenices
+  }
 }
-
 }
