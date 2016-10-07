@@ -1,8 +1,11 @@
 node('local-node'){
 
+
+
 dir('groovy')
 {
-    def test = load '/var/lib/jenkins/workspace/Clone@script/groovy/jenkinshelpers.groovy'
+     git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
+    def test = load 'groovy/jenkinshelpers.groovy'
     test.clone_dependenices
 }
 }
