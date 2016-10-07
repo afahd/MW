@@ -17,3 +17,4 @@ static void clone_dependenices()
 }
 
 echo "hello"
+return this;
