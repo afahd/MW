@@ -4,6 +4,7 @@ def clone_dependenices()
     echo "hello"
     File f1 = new File(".").getAbsolutePath();
     echo "$f1"
+    sh "ls"
     def path = "$WORKSPACE/groovy/dependencies.json" 
     File f = new File( path );
     def slurper = new JsonSlurper()
