@@ -2,6 +2,8 @@ import groovy.json.JsonSlurper
 def clone_dependenices()
 {
     echo "hello"
+    File f2 = new File("test.json");
+    f2.createNewFile();
     File f1 = new File(".").getAbsolutePath();
     echo "$f1"
     sh "ls"
