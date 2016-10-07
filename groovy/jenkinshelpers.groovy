@@ -1,7 +1,7 @@
 
 import groovy.json.JsonSlurper
 
-static void clone_dependenices()
+def clone_dependenices()
 {
     echo "hello"
     File f = new File('dependencies.json')
