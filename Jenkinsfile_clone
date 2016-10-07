@@ -2,7 +2,7 @@ node('local-node'){
 
 dir('groovy')
 {
-  def test = load 'jenkinshelpers.groovy'
+  def test = load '$pwd()/jenkinshelpers.groovy'
   test.clone_dependenices
 }
 
