@@ -1,10 +1,10 @@
 node('local-node'){
 
+git(https://github.com/afahd/MW.git/)
 
 
 dir('groovy')
 {
-     git branch: 'master', url: 'ssh://afahd@gerrit.plumgrid.com:29418/middle-earth'
     def test = load 'groovy/jenkinshelpers.groovy'
     test.clone_dependenices
 }
