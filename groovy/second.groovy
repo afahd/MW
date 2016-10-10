@@ -1,5 +1,5 @@
 
-@GrabConfig(systemClassLoader=true, initContextClassLoader=true),
+@GrabConfig(systemClassLoader=true, initContextClassLoader=true)
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
 import org.yaml.snakeyaml.*
 public class Dependency {
