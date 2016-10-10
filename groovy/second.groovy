@@ -1,3 +1,5 @@
+#!/usr/bin/groovy
+
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
 import org.yaml.snakeyaml.*
 
