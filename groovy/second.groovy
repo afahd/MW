@@ -5,15 +5,15 @@ import org.yaml.snakeyaml.*
 //list = (List<String>) yaml.load(document)
 //println(list)
 
-          Yaml yaml = new Yaml()
-        def obj = yaml.load("""
-        a: 1
-        b: 2
-        c:
-          - aaa
-          - bbb""")
+Yaml yaml = new Yaml()
+def obj = yaml.load("""
+a: 1
+b: 2
+c:
+- aaa
+- bbb""")
 
-        assert obj.a == 1
-        assert obj.b == 2
-        assert obj.c == ["aaa", "bbb"]
-        println(obj)
+assert obj.a == 1
+assert obj.b == 2
+assert obj.c == ["aaa", "bbb"]
+println(obj)
