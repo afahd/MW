@@ -16,6 +16,6 @@ c:
 assert obj.a == 1
 assert obj.b == 2
 assert obj.c == ["aaa", "bbb"]
-println(obj)
+echo($obj)
 
 return ;
