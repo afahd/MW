@@ -1,4 +1,5 @@
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
+@GrabConfig( systemClassLoader=true )
 import org.yaml.snakeyaml.*
 public class Dependency {
     public LinkedHashMap h1;
