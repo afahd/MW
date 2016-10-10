@@ -5,8 +5,8 @@ git "https://github.com/afahd/MW.git"
 
 dir('groovy')
 {
-  load("second.groovy")
-
+  def test = load("second.groovy")
+  test.clone()
 }
 
 }
