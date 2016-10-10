@@ -6,6 +6,7 @@ import org.yaml.snakeyaml.*
 //println(list)
 
 Yaml yaml = new Yaml()
+echo "hello"
 def obj = yaml.load("""
 a: 1
 b: 2
