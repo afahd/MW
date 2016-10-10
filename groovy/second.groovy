@@ -1,15 +1,13 @@
-#!/usr/bin/groovy
-
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
 import org.yaml.snakeyaml.*
 
-public class Dependency {
-    public LinkedHashMap h1;
-    Dependency(LinkedHashMap h1) {
-        this.h1 = h1
-    }
-}
-def clone()
+//public class Dependency {
+    //public LinkedHashMap h1;
+    //Dependency(LinkedHashMap h1) {
+    //    this.h1 = h1
+  //  }
+//}
+public static clone()
 {
     Yaml yaml = new Yaml();
     String project;
