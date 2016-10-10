@@ -6,7 +6,7 @@ public class Dependency {
         this.h1 = h1
     }
 }
-public static clone()
+def clone()
 {
    Yaml yaml = new Yaml();
    String project;
