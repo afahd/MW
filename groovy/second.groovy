@@ -1,9 +1,6 @@
-#!/usr/bin/groovy
-import groovy.grape.Grape
-@Grapes([
+
 @GrabConfig(systemClassLoader=true, initContextClassLoader=true),
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
-])
 import org.yaml.snakeyaml.*
 public class Dependency {
     public LinkedHashMap h1;
