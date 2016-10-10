@@ -1,8 +1,7 @@
 
 node('local-node')
 {
-@GrabConfig(systemClassLoader=true, initContextClassLoader=true)
-@Grab(group='org.yaml', module='snakeyaml', version='1.17')
+
 git "https://github.com/afahd/MW.git"
 
 dir('groovy')
