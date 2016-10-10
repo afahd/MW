@@ -1,24 +1,33 @@
+@Grab(group='org.yaml', module='snakeyaml', version='1.17')
 import org.yaml.snakeyaml.*
 
-@Grab(group='org.yaml', module='snakeyaml', version='1.5')
-//import org.yaml.snakeyaml.*
-//def yaml = new Yaml()
-//def document = "\n- Hesperiidae\n- Papilionidae\n- Apatelodidae\n- Epiplemidae"
-//list = (List<String>) yaml.load(document)
-//println(list)
+public class Dependency {
+    public LinkedHashMap h1;
+    Dependency(LinkedHashMap h1) {
+        this.h1 = h1
+    }
+}
+def clone()
+{
+    Yaml yaml = new Yaml();
+    String project;
+    String location;
+    String branch;
+    String build;
+    InputStream input = new FileInputStream(new File("dependencies.yaml"));
+    Dependency data = yaml.load(input);
+    println(data.h1.get('tools'))
+    Set s1 = data.h1.keySet();
+    for (int num=0;num<s1.size();num++)
+    {
+        project = s1.toArray()[num];
+        location = data.h1.get(project)['location'];
+        branch = data.h1.get(project)['branch'];
+        build = data.h1.get(project)['build'];
 
-Yaml yaml = new Yaml()
-echo "hello"
-def obj = yaml.load("""
-a: 1
-b: 2
-c:
-- aaa
-- bbb""")
+        echo "Cloning dependencies for $project "
+        git branch: branch, url: location
+    }
+}
 
-assert obj.a == 1
-assert obj.b == 2
-assert obj.c == ["aaa", "bbb"]
-echo"$obj"
-
-return ;
+return this;
