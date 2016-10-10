@@ -1,4 +1,5 @@
 #!/usr/bin/groovy
+import groovy.grape.Grape
 
 @GrabConfig(systemClassLoader=true, initContextClassLoader=true)
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
