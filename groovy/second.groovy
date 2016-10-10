@@ -2,7 +2,7 @@
 //import org.yaml.snakeyaml.*
 @Grab(group='org.yaml', module='snakeyaml', version='1.17')
 
-echo "hello"
+//echo "hello"
 //public class Dependency {
     //public LinkedHashMap h1;
     //Dependency(LinkedHashMap h1) {
