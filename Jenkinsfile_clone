@@ -7,6 +7,8 @@ sh "ls"
 
 sh "pwd"
 
+sh "hostname"
+
 echo "this is groovy"
 clone.clone()
 
