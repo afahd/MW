@@ -4,10 +4,8 @@ node('local-node')
 
 git "https://github.com/afahd/MW.git"
 
-dir('groovy') 
-{
     echo "this is groovy"
     clone.clone()
-}
+
 
 }
