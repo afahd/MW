@@ -3,6 +3,7 @@ node('local-node')
 {
 
 git "https://github.com/afahd/MW.git"
+sh "ls"
 
 echo "this is groovy"
 clone.clone()
