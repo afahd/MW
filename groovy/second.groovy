@@ -17,7 +17,7 @@ def clone()
    String build;
    InputStream input = new FileInputStream(new File("dependencies.yaml"));
    def test1 = readfile "dependencies.yaml"
-   echo "$test1"
+   println(test1)
    Dependency data = yaml.load(input);
    Set s1 = data.h1.keySet();
    for (int num=0;num<s1.size();num++)
