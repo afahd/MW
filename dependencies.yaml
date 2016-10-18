@@ -4,5 +4,5 @@ tools:
       build: default
 corelib:
     - location: ssh://gerrit.plumgrid.com:29418/corelib
-      branch: v1.3
+      branch: master
       build: default
