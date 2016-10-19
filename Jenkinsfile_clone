@@ -5,7 +5,7 @@ node('local-node')
 git "https://github.com/afahd/MW.git"
 
 echo "this is groovy"
-clone.cloneDependencies()
+clone.clone()
 
 
 }
